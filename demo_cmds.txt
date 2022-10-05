@@ -1,0 +1,5 @@
+#remove all containers
+docker container rm $(docker container ls -aq) -f
+
+#remove docker images
+docker image rm $(docker image ls -q)
