@@ -1,13 +1,17 @@
-{
-  "name": "docker_web_app",
-  "version": "1.0.0",
-  "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.16.1"
-  }
-}
+// Simple node.js web app for demonstrating containerizing apps
+// For quick demo purposes only (not properly maintained)
+'use strict';
+
+var express = require('express'),
+    app = express();
+
+app.set('views', 'views');
+app.set('view engine', 'pug');
+
+app.get('/', function(req, res) {
+    res.render('home', {
+  });
+});
+
+app.listen(8080);
+module.exports.getApp = app;
